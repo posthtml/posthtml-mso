@@ -215,7 +215,7 @@ Show in all versions before this one, including it:
 
 ```html
 <outlook lte="2007">
-  <div>Show in all Outlooks before 2007, not including it</div>
+  <div>Show in all Outlooks before 2007, including it</div>
 </outlook>
 ```
 
@@ -223,7 +223,7 @@ Result:
 
 ```html
 <!--[if lte mso 12]>
-  <div>Show in all Outlooks before 2007, not including it</div>
+  <div>Show in all Outlooks before 2007, including it</div>
 <![endif]-->
 ```
 
@@ -293,7 +293,7 @@ Because of this, if you target either of them you will be targeting them both. C
 
 ### Duplicate Attributes
 
-Consider this exaxmple:
+Consider this example:
 
 ```html
 <outlook gt="2003" lte="2013" gt="2007">
