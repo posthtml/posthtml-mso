@@ -1,0 +1,38 @@
+{
+  "name": "posthtml-mso",
+  "description": "PostHTML plugin that simplifies writing Outlook conditionals in HTML emails.",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Cosmin Popovici (https://github.com/cossssmin)",
+  "bugs": "https://github.com/cossssmin/posthtml-mso/issues",
+  "homepage": "https://github.com/cossssmin/posthtml-mso",
+  "repository": "cossssmin/posthtml-mso",
+  "main": "lib",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "nyc ava --verbose",
+    "pretest": "xo",
+    "release": "np"
+  },
+  "keywords": [
+    "mso",
+    "html",
+    "outlook",
+    "comments",
+    "posthtml",
+    "html-email",
+    "conditionals",
+    "posthtml-plugin"
+  ],
+  "dependencies": {
+    "posthtml": "^0.12.0"
+  },
+  "devDependencies": {
+    "ava": "^3.6.0",
+    "np": "^6.2.0",
+    "nyc": "^15.0.1",
+    "xo": "^0.29.0"
+  }
+}
