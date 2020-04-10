@@ -360,7 +360,7 @@ posthtml([mso({ tag: 'mso' })])
 [npm-version-shield]: https://img.shields.io/npm/v/posthtml-mso.svg
 [npm-stats]: http://npm-stat.com/charts.html?package=posthtml-mso
 [npm-stats-shield]: https://img.shields.io/npm/dt/posthtml-mso.svg
-[travis-ci]: https://travis-ci.org/cossssmin/posthtml-mso/
-[travis-ci-shield]: https://img.shields.io/travis/cossssmin/posthtml-mso/master.svg
+[travis-ci]: https://travis-ci.org/posthtml/posthtml-mso/
+[travis-ci-shield]: https://img.shields.io/travis/posthtml/posthtml-mso/master.svg
 [license]: ./LICENSE
 [license-shield]: https://img.shields.io/npm/l/posthtml-mso.svg
