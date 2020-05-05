@@ -14,7 +14,7 @@
 Writing Outlook conditionals in HTML emails is gross:
 
 ```html
-<!--[if mso|ie]>
+<!--[if mso]>
   <div>Show this in all Outlook versions</div>
 <![endif]-->
 ```
@@ -87,7 +87,7 @@ Using the tag with no attributes will target all Outlook versions:
 Result:
 
 ```html
-<!--[if mso|ie]>
+<!--[if mso]>
   <div>Show this in all Outlook versions</div>
 <![endif]-->
 ```
