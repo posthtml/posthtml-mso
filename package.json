@@ -1,7 +1,7 @@
 {
   "name": "posthtml-mso",
   "description": "PostHTML plugin that simplifies writing Outlook conditionals in HTML emails.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "author": "Cosmin Popovici (https://github.com/cossssmin)",
   "bugs": "https://github.com/posthtml/posthtml-mso/issues",
