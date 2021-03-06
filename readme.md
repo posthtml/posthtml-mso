@@ -5,7 +5,7 @@
 
   [![Version][npm-version-shield]][npm]
   [![License][license-shield]][license]
-  [![Build][travis-ci-shield]][travis-ci]
+  [![Build][github-ci-shield]][github-ci]
   [![Downloads][npm-stats-shield]][npm-stats]
 </div>
 
@@ -360,7 +360,7 @@ posthtml([mso({ tag: 'mso' })])
 [npm-version-shield]: https://img.shields.io/npm/v/posthtml-mso.svg
 [npm-stats]: http://npm-stat.com/charts.html?package=posthtml-mso
 [npm-stats-shield]: https://img.shields.io/npm/dt/posthtml-mso.svg
-[travis-ci]: https://travis-ci.org/posthtml/posthtml-mso/
-[travis-ci-shield]: https://img.shields.io/travis/posthtml/posthtml-mso/master.svg
-[license]: ./LICENSE
+[github-ci]: https://github.com/posthtml/posthtml-mso/actions
+[github-ci-shield]: https://img.shields.io/github/workflow/status/posthtml/posthtml-mso/Node.js%20CI
+[license]: ./license
 [license-shield]: https://img.shields.io/npm/l/posthtml-mso.svg
