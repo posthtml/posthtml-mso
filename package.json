@@ -9,7 +9,7 @@
   "repository": "posthtml/posthtml-mso",
   "main": "lib",
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "scripts": {
     "test": "nyc ava --verbose",
