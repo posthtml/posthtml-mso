@@ -3,6 +3,8 @@ module.exports = {
   rules: {
     semi: 0,
     complexity: 0,
+    'comma-dangle': 0,
+    'arrow-body-style': 0,
     'capitalized-comments': 0,
     'unicorn/prefer-ternary': 0,
     'unicorn/string-content': 0,

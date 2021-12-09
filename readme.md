@@ -52,15 +52,20 @@ $ npm i posthtml-mso
 ## Usage
 
 ```js
-const posthtml = require('posthtml')
-const mso = require('posthtml-mso')
+import posthtml from 'posthtml'
+import mso from 'posthtml-mso'
+
 const options = { /* see options below */ }
 
 posthtml([mso(options)])
   .process('<outlook only="2013">Show in Outlook 2013</outlook>')
   .then(result => console.log(result.html))
+```
 
-  // <!--[if mso 15]>Show in Outlook 2013<![endif]-->
+Result:
+
+```html
+<!--[if mso 15]>Show in Outlook 2013<![endif]-->
 ```
 
 ## Syntax
@@ -341,8 +346,9 @@ The name of the tag you want the plugin to use. Will be used for both available 
 For example:
 
 ```js
-const posthtml = require('posthtml')
-const mso = require('posthtml-mso')
+import posthtml from 'posthtml'
+import mso from 'posthtml-mso'
+
 const html = `
   <mso only="2013">Show in Outlook 2013</mso>
   <not-mso>Hide from Outlook</not-mso>
@@ -351,9 +357,13 @@ const html = `
 posthtml([mso({ tag: 'mso' })])
   .process(html)
   .then(result => console.log(result.html))
+```
 
-  // <!--[if mso 15]>Show in Outlook 2013<![endif]-->
-  // <!--[if !mso]><!-->Hide from Outlook<!--<![endif]-->
+Result:
+
+```html
+<!--[if mso 15]>Show in Outlook 2013<![endif]-->
+<!--[if !mso]><!-->Hide from Outlook<!--<![endif]-->
 ```
 
 [npm]: https://www.npmjs.com/package/posthtml-mso

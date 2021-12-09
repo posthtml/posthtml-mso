@@ -1,9 +1,11 @@
-const test = require('ava')
-const plugin = require('../lib')
-const posthtml = require('posthtml')
+import path from 'node:path'
+import {readFileSync} from 'node:fs'
+import {fileURLToPath} from 'node:url'
+import test from 'ava'
+import posthtml from 'posthtml'
+import plugin from '../lib/index.js'
 
-const path = require('path')
-const {readFileSync} = require('fs')
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const fixture = file => readFileSync(path.join(__dirname, 'fixtures', `${file}.html`), 'utf8')
 const expected = file => readFileSync(path.join(__dirname, 'expected', `${file}.html`), 'utf8')
