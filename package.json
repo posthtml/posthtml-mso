@@ -28,7 +28,7 @@
     "posthtml-plugin"
   ],
   "dependencies": {
-    "posthtml": "^0.16.5"
+    "posthtml": "^0.16.6"
   },
   "devDependencies": {
     "ava": "^4.0.1",
