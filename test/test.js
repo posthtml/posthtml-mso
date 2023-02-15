@@ -1,6 +1,6 @@
 const test = require('ava')
-const plugin = require('../lib')
 const posthtml = require('posthtml')
+const plugin = require('../lib/index.js')
 
 const path = require('path')
 const {readFileSync} = require('fs')
