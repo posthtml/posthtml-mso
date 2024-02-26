@@ -52,8 +52,9 @@ $ npm i posthtml-mso
 ## Usage
 
 ```js
-const posthtml = require('posthtml')
-const mso = require('posthtml-mso')
+import posthtml from 'posthtml'
+import mso from 'posthtml-mso'
+
 const options = { /* see options below */ }
 
 posthtml([mso(options)])
@@ -78,7 +79,7 @@ The conditional is created based on the Outlook version(s) you need to target, w
 
 Using the tag with no attributes will target all Outlook versions:
 
-```html
+```xml
 <outlook>
   <div>Show this in all Outlook versions</div>
 </outlook>
@@ -96,7 +97,7 @@ Result:
 
 This tag will basically hide content from all Outlook versions:
 
-```html
+```xml
 <not-outlook>
   <div>All Outlooks will ignore this</div>
 </not-outlook>
@@ -125,7 +126,7 @@ To define which Outlook versions you are targeting, you can use one of the follo
 
 Show the content only in this Outlook version:
 
-```html
+```xml
 <outlook only="2013">
   <div>Show only in Outlook 2013</div>
 </outlook>
@@ -141,7 +142,7 @@ Result:
 
 It also supports multiple, comma-separated versions:
 
-```html
+```xml
 <outlook only="2013,2016">
   <div>Show only in Outlook 2013 and 2016</div>
 </outlook>
@@ -161,7 +162,7 @@ Note: targeting Outlook 2016 will also target Outlook 2019 (see [gotchas](#gotch
 
 Show content in all Outlook versions except the ones specified.
 
-```html
+```xml
 <outlook not="2013">
   <div>Don't show in Outlook 2013</div>
 </outlook>
@@ -177,7 +178,7 @@ Result:
 
 You can also specify a comma-separated list of versions:
 
-```html
+```xml
 <outlook not="2013,2016">
   <div>Don't show in Outlook 2013 and 2016</div>
 </outlook>
@@ -195,7 +196,7 @@ Result:
 
 Show in all versions before this one, excluding it:
 
-```html
+```xml
 <outlook lt="2007">
   <div>Show in all Outlooks before 2007, excluding it</div>
 </outlook>
@@ -213,7 +214,7 @@ Result:
 
 Show in all versions before this one, including it:
 
-```html
+```xml
 <outlook lte="2007">
   <div>Show in all Outlooks before 2007, including it</div>
 </outlook>
@@ -231,7 +232,7 @@ Result:
 
 Show in all Outlook versions after this one, excluding it:
 
-```html
+```xml
 <outlook gt="2007">
   <div>Show in Outlook 2010, 2013, 2016, 2019</div>
 </outlook>
@@ -249,7 +250,7 @@ Result:
 
 Show in all Outlook versions after this one, excluding it:
 
-```html
+```xml
 <outlook gte="2007">
   <div>Show in Outlook 2007, 2010, 2013, 2016, 2019</div>
 </outlook>
@@ -267,7 +268,7 @@ Result:
 
 You can combine the `lt`, `gt`, `lte`, and `gte` attributes if you need to target multiple versions with higher accuracy.
 
-```html
+```xml
 <outlook gt="2003" lte="2013">
   <div>Show in 2007, 2010, 2013</div>
 </outlook>
@@ -295,7 +296,7 @@ Because of this, if you target either of them you will be targeting them both. C
 
 Consider this example:
 
-```html
+```xml
 <outlook gt="2003" lte="2013" gt="2007">
   <div>Show in 2007, 2010, 2013</div>
 </outlook>
@@ -315,7 +316,7 @@ The result will be:
 
 Made a typo like this?
 
-```html
+```xml
 <outlook lt="20007">
   <div>Target Outlooks before 2007</div>
 </outlook>
@@ -341,8 +342,9 @@ The name of the tag you want the plugin to use. Will be used for both available 
 For example:
 
 ```js
-const posthtml = require('posthtml')
-const mso = require('posthtml-mso')
+import posthtml from 'posthtml'
+import mso from 'posthtml-mso'
+
 const html = `
   <mso only="2013">Show in Outlook 2013</mso>
   <not-mso>Hide from Outlook</not-mso>
