@@ -29,7 +29,7 @@ It gets even worse when you need to target _specific versions_:
 
 This PostHTML plugin simplifies the way you write Outlook conditional comments:
 
-```html
+```xml
 <outlook>
   <div>Show this in all Outlook versions</div>
 </outlook>
@@ -37,7 +37,7 @@ This PostHTML plugin simplifies the way you write Outlook conditional comments:
 
 Like, really simple:
 
-```html
+```xml
 <outlook gt="2003" lte="2013">
   <div>Show in 2007, 2010, 2013</div>
 </outlook>
