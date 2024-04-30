@@ -46,7 +46,7 @@ Like, really simple:
 ## Install
 
 ```
-$ npm i posthtml-mso
+npm i posthtml-mso
 ```
 
 ## Usage
