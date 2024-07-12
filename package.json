@@ -8,19 +8,28 @@
   "homepage": "https://github.com/posthtml/posthtml-mso",
   "repository": "posthtml/posthtml-mso",
   "type": "module",
-  "exports": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=18"
   },
-  "files": [
-    "lib"
-  ],
   "scripts": {
     "dev": "vitest",
-    "release": "np",
+    "build": "unbuild",
+    "prepack": "unbuild",
+    "release": "npx np",
     "test": "vitest run --coverage",
-    "pretest": "eslint lib/*.{js,ts}"
+    "pretest": "biome lint ./lib"
   },
   "keywords": [
     "mso",
@@ -36,10 +45,9 @@
     "posthtml": "^0.16.6"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^7.0.2",
-    "@vitest/coverage-v8": "^1.3.1",
-    "eslint": "^8.57.0",
-    "np": "^10.0.0",
-    "vitest": "^1.3.1"
+    "@biomejs/biome": "1.8.3",
+    "@vitest/coverage-v8": "^2.0.2",
+    "unbuild": "^2.0.0",
+    "vitest": "^2.0.2"
   }
 }
