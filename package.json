@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@vitest/coverage-v8": "^2.0.2",
+    "@vitest/coverage-v8": "^3.0.4",
     "unbuild": "^2.0.0",
     "vitest": "^2.0.2"
   }
