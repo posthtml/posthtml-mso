@@ -12,7 +12,7 @@ const expected = file => readFileSync(path.join(__dirname, 'expected', `${file}.
 
 const clean = html => html.replace(/[^\S\r\n]+$/gm, '').trim()
 
-const process = (t, name, options, log = false) => {
+const process = (_t, name, options, log = false) => {
   return posthtml([plugin(options)])
     .process(fixture(name))
     .then(result => log ? console.log(result.html) : clean(result.html))

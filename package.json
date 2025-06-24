@@ -29,7 +29,7 @@
     "prepack": "unbuild",
     "release": "npx np",
     "test": "vitest run --coverage",
-    "pretest": "biome lint ./lib"
+    "pretest": "biome lint ./lib ./test"
   },
   "keywords": [
     "mso",
